@@ -761,11 +761,6 @@ int main(){
 //chapter 7 donee
 
 
-//write a program for fitting a straight line through a set of points, the st eqn is: y = mx + c;
-// m = (n(sum)xy - (sum)x*(sum)y)/(n((sum)x^2 - ((sum)x)^2)
-// c = 1/n((sum)y - m(sum)x)
-
-
 /*an election is contested by 5 candidates. the candidates are numbered 1 to 5 and the voting is done by marking 
 the candidate number of the ballot paper. write a program to read the ballots and count the votes cast for each 
 candidate using an array variable "count". in case, a number read is outside the range 1 to 5, the ballot should 
