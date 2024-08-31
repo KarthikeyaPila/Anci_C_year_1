@@ -759,6 +759,7 @@ int main(){
 }
 */
 
+
 /* Pascal's triangle.
 
 int main()
@@ -797,9 +798,125 @@ int main()
 */
 
 
+/* given are two one dimenstional arrays A and B, which are stored in ascending order. write a program to
+merge them into a single sorted array C that contains every item from arrays A adn B in ascending order.
+*/
+/* int main(){
 
 
+int A[] = {1, 2, 3, 4, 5, 6}; 
+int B[] = {4 , 5, 6, 7, 8, 23, 42, 69, 535, 999};
+
+int common = 0, lengthA = 0, lengthB = 0 , lengthC , smaller , x; 
+
+lengthA = sizeof(A)/sizeof(A[0]);
+lengthB = sizeof(B)/sizeof(B[0]);
+
+if(lengthA < lengthB){
+    for(int i = 0; i < lengthB; i++){
+        for(int j = 0 ; j <= i; j++){
+            if(A[i] == B[j]){common++;}
+        }
+    }
+} else{
+    for(int i = 0; i < lengthB; i++){
+        for(int j = 0 ; j <= i; j++){
+            if(A[i] == B[j]){common++;}
+        }
+    }
+}
+
+lengthC = lengthA + lengthB;
+
+int C[lengthC];
+
+for(int i = 0 ; i < lengthA ; i++){
+    if(i < lengthA){
+        
+    }
+}
 
 
+printf("%d " , C);
+
+    printf("\n");
+    return 0;
+} */
+/* [CHAT GPT]:
+
+void merge_arrays(int A[], int lengthA, int B[], int lengthB, int C[]) {
+    int i = 0, j = 0, k = 0;
+
+    // Merge arrays A and B into C
+    while (i < lengthA && j < lengthB) {
+        if (A[i] < B[j]) {
+            C[k++] = A[i++];
+        } else {
+            C[k++] = B[j++];
+        }
+    }
+
+    // Copy any remaining elements of A
+    while (i < lengthA) {
+        C[k++] = A[i++];
+    }
+
+    // Copy any remaining elements of B
+    while (j < lengthB) {
+        C[k++] = B[j++];
+    }
+}
+
+int main() {
+    int A[] = {1, 3, 5, 7, 9 , 10 , 23 , 50 , 1000 , 3402 ,430349};  // Example sorted array A
+    int B[] = {2, 4, 6, 8, 10}; // Example sorted array B
+
+    int lengthA = sizeof(A) / sizeof(A[0]);
+    int lengthB = sizeof(B) / sizeof(B[0]);
+    int lengthC = lengthA + lengthB;
+    int C[lengthC];
+
+    // Merge arrays A and B into C
+    merge_arrays(A, lengthA, B, lengthB, C);
+
+    // Print the merged and sorted array C
+    printf("Merged and sorted array C: ");
+    for (int i = 0; i < lengthC; i++) {
+        printf("%d ", C[i]);
+    }
+    printf("\n");
+
+    return 0;
+} 
+*/
+
+
+/*write a program that fills a five by five matrix as follows:
+upper left triagnle with +1
+lower right triangle with -1
+right to left diagonal with 0;
+Display the contents of the matrix using not more than two printf statements.
+
+
+int main(){
+    int matrix[5][5];
+    int i, j;
+
+    for(i = 0; i < 5 ; i++){
+        for(j = 0; j < 5 ; j++){
+            if(i+j == 4){matrix[i][j] = 0;}
+            else if(i + j > 4){matrix[i][j] = -1;}
+            else if(i + j < 4){matrix[i][j] = +1;}
+        }
+    }
+    for(i = 0; i < 5 ; i++){
+        for(j = 0; j < 5 ; j++){
+            printf("%d " , matrix[i][j]);
+        }
+    printf("\n");
+    }
+    return 0;
+}
+*/
 
 
