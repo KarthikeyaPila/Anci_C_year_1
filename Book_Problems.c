@@ -760,7 +760,6 @@ int main(){
 */
 
 /* Pascal's triangle.
- */
 
 int main()
 {
@@ -795,3 +794,12 @@ int main()
 
     return 0;
 }
+*/
+
+
+
+
+
+
+
+
