@@ -759,7 +759,6 @@ int main(){
 }
 */
 
-
 /* Pascal's triangle.
 
 int main()
@@ -797,79 +796,43 @@ int main()
 }
 */
 
-
-/* given are two one dimenstional arrays A and B, which are stored in ascending order. write a program to
+/*given are two one dimenstional arrays A and B, which are stored in ascending order. write a program to
 merge them into a single sorted array C that contains every item from arrays A adn B in ascending order.
-*/
-/* int main(){
 
-
-int A[] = {1, 2, 3, 4, 5, 6}; 
-int B[] = {4 , 5, 6, 7, 8, 23, 42, 69, 535, 999};
-
-int common = 0, lengthA = 0, lengthB = 0 , lengthC , smaller , x; 
-
-lengthA = sizeof(A)/sizeof(A[0]);
-lengthB = sizeof(B)/sizeof(B[0]);
-
-if(lengthA < lengthB){
-    for(int i = 0; i < lengthB; i++){
-        for(int j = 0 ; j <= i; j++){
-            if(A[i] == B[j]){common++;}
-        }
-    }
-} else{
-    for(int i = 0; i < lengthB; i++){
-        for(int j = 0 ; j <= i; j++){
-            if(A[i] == B[j]){common++;}
-        }
-    }
-}
-
-lengthC = lengthA + lengthB;
-
-int C[lengthC];
-
-for(int i = 0 ; i < lengthA ; i++){
-    if(i < lengthA){
-        
-    }
-}
-
-
-printf("%d " , C);
-
-    printf("\n");
-    return 0;
-} */
-/* [CHAT GPT]:
-
-void merge_arrays(int A[], int lengthA, int B[], int lengthB, int C[]) {
+void merge_arrays(int A[], int lengthA, int B[], int lengthB, int C[])
+{
     int i = 0, j = 0, k = 0;
 
     // Merge arrays A and B into C
-    while (i < lengthA && j < lengthB) {
-        if (A[i] < B[j]) {
+    while (i < lengthA && j < lengthB)
+    {
+        if (A[i] < B[j])
+        {
             C[k++] = A[i++];
-        } else {
+        }
+        else
+        {
             C[k++] = B[j++];
         }
     }
 
     // Copy any remaining elements of A
-    while (i < lengthA) {
+    while (i < lengthA)
+    {
         C[k++] = A[i++];
     }
 
     // Copy any remaining elements of B
-    while (j < lengthB) {
+    while (j < lengthB)
+    {
         C[k++] = B[j++];
     }
 }
 
-int main() {
-    int A[] = {1, 3, 5, 7, 9 , 10 , 23 , 50 , 1000 , 3402 ,430349};  // Example sorted array A
-    int B[] = {2, 4, 6, 8, 10}; // Example sorted array B
+int main()
+{
+    int A[] = {1, 3, 5, 7, 9, 10, 23, 50, 1000, 3402, 430349}; // Example sorted array A
+    int B[] = {2, 4, 6, 8, 10};                                // Example sorted array B
 
     int lengthA = sizeof(A) / sizeof(A[0]);
     int lengthB = sizeof(B) / sizeof(B[0]);
@@ -881,22 +844,21 @@ int main() {
 
     // Print the merged and sorted array C
     printf("Merged and sorted array C: ");
-    for (int i = 0; i < lengthC; i++) {
+    for (int i = 0; i < lengthC; i++)
+    {
         printf("%d ", C[i]);
     }
     printf("\n");
 
     return 0;
-} 
+}
 */
-
 
 /*write a program that fills a five by five matrix as follows:
 upper left triagnle with +1
 lower right triangle with -1
 right to left diagonal with 0;
 Display the contents of the matrix using not more than two printf statements.
-
 
 int main(){
     char matrix[5][5];
@@ -919,11 +881,76 @@ int main(){
 }
 */
 
+/*develop a program to implement the binary search algorithm. this technique compares the search
+key value with the value of the element that is midway in a sorted list.
+
+int main()
+{
+    int arr[] = {23, 12, 412, 42, 1, 4, 2, 3, 5, 7, 19, 13, 999, 69, 100};
+    int input_num;
+
+    int length = sizeof(arr) / sizeof(int);
+
+    // 1. make a sorter.
+    for (int j = 0; j < length; j++)
+    {
+        for (int i = 0; i < length - j - 1; i++)
+        {
+            if (arr[i] >= arr[i + 1])
+            {
+                int c = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = c;
+            }
+            else
+            {
+                continue;
+            }
+        }
+    }
+
+    for (int i = 0; i < length; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    // make the user input a valid input.
+    printf("\nenter a valid number whihc is in the array. \n");
+    scanf("%d", &input_num);
+
+    int low = 0, high = length - 1;
+
+    int middle = low + (high - low) / 2;
+
+    while (low <= high)
+    {
+
+        if (arr[middle] > input_num)
+        {
+            high = middle - 1;
+        }
+        else if (arr[middle] < input_num)
+        {
+            low = middle + 1;
+        }
+        else if (arr[middle] == input_num)
+        {
+            printf("found the number! it is: %d\nit is at position: %d from the left.", arr[middle], middle);
+
+            break;
+        }
+        middle = low + (high - low) / 2;
+    }
+    if (low > high)
+    {
+        printf("number not found in the list. \n");
+    }
+
+    return 0;
+}
+*/
+
 
 //
-
-
-
-
 
 
