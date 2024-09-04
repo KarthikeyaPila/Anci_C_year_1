@@ -58,8 +58,6 @@ int main(){
     scanf("%d", reading2);
     printf("you travelled: %d" , distance);
 }
-
-
 */
 
 /*int add(int a , int b){
@@ -984,6 +982,64 @@ int main(){
     return 0;
 }
 */
+
+// chapter 8 donee
+
+/*write a program, which reads your name from the keyboard and outputs a list of ASCII codes, which represent your name.
+
+int main()
+{
+    char name[100];
+    printf("whats your name? \n");
+    scanf("%s", &name);
+    int length = sizeof(name) / sizeof(char);
+
+    for (int i = 0; (int)name[i] > 66 && (int)name[i] < 123 || (int)name[i] == 32; i++)
+    {
+        printf("%d ", (int)name[i]);
+    }
+    return 0;
+}
+*/
+
+//
+
+/*write a program to do the following: Questions and answers.
+
+int main()
+{
+    char answer[100];
+    int attempts = 0;
+    char solution1[] = "Dennis Ritchie";
+    printf("who is the inventor of C? \n");
+    scanf("%c");
+
+    while (attempts < 3)
+    {
+        scanf("%s", &answer);
+        if (strcmp(answer, solution1) == 0)
+        {
+            printf("yess you are correct. \n");
+        }
+        else
+        {
+            attempts++;
+            printf("you are incorrect, try again. %d\n", attempts);
+        }
+        if (attempts == 3)
+        {
+            printf("you've ran out of chances. \n");
+            break;
+        }
+    }
+
+    printf("The correct answer is: Dennis Ritchie. \n");
+    return 0;
+}
+*/ 
+
+
+
 
 
 
