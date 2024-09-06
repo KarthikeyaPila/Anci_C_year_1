@@ -1036,7 +1036,282 @@ int main()
     printf("The correct answer is: Dennis Ritchie. \n");
     return 0;
 }
-*/ 
+*/
+
+/* write a program to extract a portion of a character string and print the extracted string.
+
+int main()
+{
+
+    int start, stop;
+    char arr[100] = {0};
+    printf("what string do you want to input? \n");
+    scanf("%s", arr);
+    int length = sizeof(arr) / sizeof(char);
+    printf("at what index do you want to start?\n");
+    scanf("%d", &start);
+    printf("at what index do you want to stop?\n");
+    scanf("%d", &stop);
+    for (int i = start; i <= stop; i++)
+    {
+        printf("%c", arr[i]);
+    }
+    return 0;
+}
+*/
+
+/* write a program which will read a text and count all occurrences of a particular word.
+
+int main()
+{
+    char sentence[1000] = {0};
+    char word[100] = {0};
+    int count = 0;
+    printf("write the sentence for which you want to operate. \n");
+    fgets(sentence, 1000, stdin);
+    printf("what word do you want to count in the given sentence? \n");
+    scanf("%s", word);
+    int length2 = sizeof(sentence) / sizeof(char);
+    int length1 = sizeof(word) / sizeof(char);
+
+    char *token;
+    token = strtok(sentence, " ,.\n;");
+
+    while (token != NULL)
+    {
+        if (strcmp(token, word) == 0)
+        {
+            count++;
+        }
+        token = strtok(NULL, " ,.-\n");
+    }
+    printf("The word '%s' appears %d times in the given sentence.\n", word, count);
+    return 0;
+}
+*/
+
+/* write a program which will read a string and rewrite it in the alphabetical order.
+
+int main()
+{
+
+    char string[1000] = {0};
+    printf("please write the string that you want to rewrite. \n");
+    fgets(string, sizeof(string), stdin);
+    int length = strlen(string);
+    if (string[length - 1] == '\n')
+    {
+        string[length - 1] = '\0';
+    }
+
+    // bubblesort:
+
+    for (int i = 0; i < length - 1; i++)
+    {
+        for (int j = 0; j < length - i - 1; j++)
+        {
+            if (string[j] > string[j + 1])
+            {
+                 char a = string[j];
+                string[j] = string[j + 1];
+                string[j + 1] = a;
+            }
+        }
+    }
+    for(int i = 0; i < length; i++){
+        printf("%c", string[i]);
+    }
+
+    return 0;
+}
+*/
+
+/* //write a program to replace a particular word by another word in a given string.
+
+
+void remove_newline(char* str) {
+    size_t len = strlen(str);
+    if (len > 0 && str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+    }
+}
+
+int main()
+{
+    char string[1000] = {0};
+    char change_word[1000] = {0};
+    char new_word[1000] = {0};
+
+    printf("give me the string that you want to change.\n");
+    fgets(string, sizeof(string), stdin);
+    remove_newline(string);
+    printf("tell me which word do you want to change? \n");
+    fgets(change_word, sizeof(change_word), stdin);
+    remove_newline(change_word);
+    printf("what do you want the chosen word to change to? \n");
+    fgets(new_word, sizeof(new_word), stdin);
+    remove_newline(new_word);
+
+    char *change;
+    change = strstr(string, change_word);
+    if (change != NULL)
+    {
+        strncpy(change, new_word, strlen(new_word));
+        puts(string);
+    }
+
+
+    size_t len_before = change - string;
+    size_t len_change_word = strlen(change_word);
+    size_t len_new_word = strlen(new_word);
+
+    char result[1000] = {0};
+
+    strncpy(result, string, len_before);
+
+
+    strcat(result, new_word);
+
+
+    strcat(result, change + len_change_word);
+
+
+    printf("Modified string: %s\n", result);
+
+    printf("%s", string);
+    return 0;
+}
+*/
+
+/*/ write a program that reads a string from the keyboard and determines whether the string is a palindrome or not.
+
+int main()
+{
+
+    char string[1000] = {0};
+    printf("enter the word that you think would be a palindrome. \n");
+    scanf("%s", string);
+    int length = 0;
+    for(int x = 0; string[x] != '\0'; x++){length++;}
+    int i = 0;
+    int j = 0;
+    do
+    {
+        j = length - i - 1;
+        if (string[i] == string[j])
+        {
+            printf("this is a palindrome. \n");
+            j++;
+            i++;
+            break;
+        }
+        else if (string[i] != string[j])
+        {
+            printf("this is not a plaindrome. \n");
+            j++;
+            i++;
+            break;
+        }
+    } while (i < j);
+    return 0;
+}
+*/
+
+/*/write a program that reads the cost of an item in the form RRRR.PP where R denotes rupees and P denotes paisa,
+
+
+int main(){
+
+    char number[7];
+    char word_number[100] = "";
+    printf("enter a number in the format RRRR.PP where R denotes rupees and P denotes paisa. \n");
+    scanf("%7s" , number);
+    int length = 0; 
+    length = sizeof(number)/sizeof(char);
+
+    if(number[4] != '.'){printf("the given number is not in the required form."); return 0;}
+
+    for(int i = 0; i < length; i++){
+        if(i == 0){
+        if(number[i] == '0'){strcat(word_number , "");}
+        if(number[i] == '1'){strcat(word_number , "ONE THOUSAND ");}
+        if(number[i] == '2'){strcat(word_number , "TWO THOUSAND ");}
+        if(number[i] == '3'){strcat(word_number , "THREE THOUSAND ");}
+        if(number[i] == '4'){strcat(word_number , "FOUR THOUSAND ");}
+        if(number[i] == '5'){strcat(word_number , "FIVE THOUSAND ");}
+        if(number[i] == '6'){strcat(word_number , "SIX THOUSAND ");}
+        if(number[i] == '7'){strcat(word_number , "SEVEN THOUSAND ");}
+        if(number[i] == '8'){strcat(word_number , "EIGHT THOUSAND ");}
+        if(number[i] == '9'){strcat(word_number , "NINE THOUSAND ");}  
+    }
+        if(i == 1){
+        if(number[i] == '0'){strcat(word_number , "zero ");}
+        if(number[i] == '1'){strcat(word_number , "ONE HUNDRED ");}
+        if(number[i] == '2'){strcat(word_number , "TWO HUNDRED ");}
+        if(number[i] == '3'){strcat(word_number , "THREE HUNDRED ");}
+        if(number[i] == '4'){strcat(word_number , "FOUR HUNDRED ");}
+        if(number[i] == '5'){strcat(word_number , "FIVE HUNDRED ");}
+        if(number[i] == '6'){strcat(word_number , "SIX HUNDRED ");}
+        if(number[i] == '7'){strcat(word_number , "SEVEN HUNDRED ");}
+        if(number[i] == '8'){strcat(word_number , "EIGHT HUNDRED ");}
+        if(number[i] == '9'){strcat(word_number , "NINE HUNDRED ");}  
+    }    if(i == 2){
+        if(number[i] == '0'){strcat(word_number , "zero");}
+        if(number[i] == '1'){strcat(word_number , "ONE ");}
+        if(number[i] == '2'){strcat(word_number , "TWENTY ");}
+        if(number[i] == '3'){strcat(word_number , "THIRTY ");}
+        if(number[i] == '4'){strcat(word_number , "FOURTY ");}
+        if(number[i] == '5'){strcat(word_number , "FIFTY ");}
+        if(number[i] == '6'){strcat(word_number , "SIXTY ");}
+        if(number[i] == '7'){strcat(word_number , "SEVENTY ");}
+        if(number[i] == '8'){strcat(word_number , "EIGHTTY ");}
+        if(number[i] == '9'){strcat(word_number , "NINETY ");}  
+    }    if(i == 3){
+        if(number[i] == '0'){strcat(word_number , "zero");}
+        if(number[i] == '1'){strcat(word_number , "ONE ");}
+        if(number[i] == '2'){strcat(word_number , "TWO ");}
+        if(number[i] == '3'){strcat(word_number , "THREE ");}
+        if(number[i] == '4'){strcat(word_number , "FOUR ");}
+        if(number[i] == '5'){strcat(word_number , "FIVE ");}
+        if(number[i] == '6'){strcat(word_number , "SIX ");}
+        if(number[i] == '7'){strcat(word_number , "SEVEN ");}
+        if(number[i] == '8'){strcat(word_number , "EIGHT ");}
+        if(number[i] == '9'){strcat(word_number , "NINE ");}  
+
+        if(number[4] == '.'){ strcat(word_number , "AND ");}
+
+    }   if(i == 5){
+        if(number[i] == '0'){strcat(word_number , "zero");}
+        if(number[i] == '1'){strcat(word_number , "ONE ");}
+        if(number[i] == '2'){strcat(word_number , "TWO ");}
+        if(number[i] == '3'){strcat(word_number , "THREE ");}
+        if(number[i] == '4'){strcat(word_number , "FOUR ");}
+        if(number[i] == '5'){strcat(word_number , "FIVE ");}
+        if(number[i] == '6'){strcat(word_number , "SIX ");}
+        if(number[i] == '7'){strcat(word_number , "SEVEN ");}
+        if(number[i] == '8'){strcat(word_number , "EIGHT ");}
+        if(number[i] == '9'){strcat(word_number , "NINE ");}  
+    }   if(i == 6){
+        if(number[i] == '0'){strcat(word_number , "zero");}
+        if(number[i] == '1'){strcat(word_number , "ONE ");}
+        if(number[i] == '2'){strcat(word_number , "TWO ");}
+        if(number[i] == '3'){strcat(word_number , "THREE ");}
+        if(number[i] == '4'){strcat(word_number , "FOUR ");}
+        if(number[i] == '5'){strcat(word_number , "FIVE ");}
+        if(number[i] == '6'){strcat(word_number , "SIX ");}
+        if(number[i] == '7'){strcat(word_number , "SEVEN ");}
+        if(number[i] == '8'){strcat(word_number , "EIGHT ");}
+        if(number[i] == '9'){strcat(word_number , "NINE ");} 
+
+    }
+    }
+    
+    printf("%s" , word_number);
+    
+    return 0;
+
+}
+*/
 
 
 
