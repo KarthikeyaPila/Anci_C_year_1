@@ -1183,7 +1183,7 @@ int main()
 }
 */
 
-/*/ write a program that reads a string from the keyboard and determines whether the string is a palindrome or not.
+/* write a program that reads a string from the keyboard and determines whether the string is a palindrome or not.
 
 int main()
 {
@@ -1217,7 +1217,7 @@ int main()
 }
 */
 
-/*/write a program that reads the cost of an item in the form RRRR.PP where R denotes rupees and P denotes paisa,
+/*write a program that reads the cost of an item in the form RRRR.PP where R denotes rupees and P denotes paisa,
 
 
 int main(){
@@ -1226,7 +1226,7 @@ int main(){
     char word_number[100] = "";
     printf("enter a number in the format RRRR.PP where R denotes rupees and P denotes paisa. \n");
     scanf("%7s" , number);
-    int length = 0; 
+    int length = 0;
     length = sizeof(number)/sizeof(char);
 
     if(number[4] != '.'){printf("the given number is not in the required form."); return 0;}
@@ -1242,7 +1242,7 @@ int main(){
         if(number[i] == '6'){strcat(word_number , "SIX THOUSAND ");}
         if(number[i] == '7'){strcat(word_number , "SEVEN THOUSAND ");}
         if(number[i] == '8'){strcat(word_number , "EIGHT THOUSAND ");}
-        if(number[i] == '9'){strcat(word_number , "NINE THOUSAND ");}  
+        if(number[i] == '9'){strcat(word_number , "NINE THOUSAND ");}
     }
         if(i == 1){
         if(number[i] == '0'){strcat(word_number , "zero ");}
@@ -1254,7 +1254,7 @@ int main(){
         if(number[i] == '6'){strcat(word_number , "SIX HUNDRED ");}
         if(number[i] == '7'){strcat(word_number , "SEVEN HUNDRED ");}
         if(number[i] == '8'){strcat(word_number , "EIGHT HUNDRED ");}
-        if(number[i] == '9'){strcat(word_number , "NINE HUNDRED ");}  
+        if(number[i] == '9'){strcat(word_number , "NINE HUNDRED ");}
     }    if(i == 2){
         if(number[i] == '0'){strcat(word_number , "zero");}
         if(number[i] == '1'){strcat(word_number , "ONE ");}
@@ -1265,7 +1265,7 @@ int main(){
         if(number[i] == '6'){strcat(word_number , "SIXTY ");}
         if(number[i] == '7'){strcat(word_number , "SEVENTY ");}
         if(number[i] == '8'){strcat(word_number , "EIGHTTY ");}
-        if(number[i] == '9'){strcat(word_number , "NINETY ");}  
+        if(number[i] == '9'){strcat(word_number , "NINETY ");}
     }    if(i == 3){
         if(number[i] == '0'){strcat(word_number , "zero");}
         if(number[i] == '1'){strcat(word_number , "ONE ");}
@@ -1276,7 +1276,7 @@ int main(){
         if(number[i] == '6'){strcat(word_number , "SIX ");}
         if(number[i] == '7'){strcat(word_number , "SEVEN ");}
         if(number[i] == '8'){strcat(word_number , "EIGHT ");}
-        if(number[i] == '9'){strcat(word_number , "NINE ");}  
+        if(number[i] == '9'){strcat(word_number , "NINE ");}
 
         if(number[4] == '.'){ strcat(word_number , "AND ");}
 
@@ -1290,7 +1290,7 @@ int main(){
         if(number[i] == '6'){strcat(word_number , "SIX ");}
         if(number[i] == '7'){strcat(word_number , "SEVEN ");}
         if(number[i] == '8'){strcat(word_number , "EIGHT ");}
-        if(number[i] == '9'){strcat(word_number , "NINE ");}  
+        if(number[i] == '9'){strcat(word_number , "NINE ");}
     }   if(i == 6){
         if(number[i] == '0'){strcat(word_number , "zero");}
         if(number[i] == '1'){strcat(word_number , "ONE ");}
@@ -1301,19 +1301,163 @@ int main(){
         if(number[i] == '6'){strcat(word_number , "SIX ");}
         if(number[i] == '7'){strcat(word_number , "SEVEN ");}
         if(number[i] == '8'){strcat(word_number , "EIGHT ");}
-        if(number[i] == '9'){strcat(word_number , "NINE ");} 
+        if(number[i] == '9'){strcat(word_number , "NINE ");}
 
     }
     }
-    
+
     printf("%s" , word_number);
-    
+
     return 0;
 
 }
 */
 
+/*write a program to read two strings and compare them using the fxn strncmp() and print a message that
+ the first string is equal, less or greater than the second one.
 
+int main(){
+    char string1[] = "hzllo";
+    char string2[] = "hzz";
+    int string_compare = strncmp(string1 , string2 , strlen(string1) < strlen(string2) ? strlen(string1) : strlen(string2));
+    if (string_compare == 0) {
+        printf("Both the strings have the same value.\n");
+    } else {
+        string_compare > 0 ? printf("string 1 > string 2\n") : printf("string 2 > string 1\n");
+    }
+    return 0;
+}
+*/
+
+/* write a program to read a line of text from the keybard and print out the number of occurrences of a
+  given substring using the function strstr().
+
+int main()
+{
+
+    char string[] = "hello, i am karthikeya, i am a student, i am doin good.";
+    char *substring;
+    char word[100];
+    int count = 0;
+    printf("what word do you want to find the occurrence for?\n");
+    scanf("%s", word);
+    substring = strstr(string , word);
+        while (substring != NULL)
+        {
+            count++;
+            substring = strstr(substring + 1, word);
+        }
+        printf("the word: %s had occured %d number of times.", word, count);
+
+    return 0;
+}
+*/
+
+/*// write a promgram that will copy m consecutive characters from string s1 beginning at position n to another string s2.
+
+int main()
+{
+
+    int m, n;
+    char string1[100];
+    char string2[100];
+    int i = 0;
+
+    printf("what string do you want to do the operations on?\n");
+    fgets(string1, 100, stdin);
+    printf("at what index do you want to start the transfer?\n");
+    scanf("%d", &n);
+    printf("how many characters do you want to transfer?\n");
+    scanf("%d", &m);
+    for (int j = n; j < m + n && string1[j] != '\0'; j++)
+    {
+        string2[i] = string1[j];
+        i++;
+    }
+    string2[i] = '\0';
+    printf("%s", string2);
+    return 0;
+}
+*/
+
+/*/ write a program to create a directory of students with roll numbers.
+int main()
+{
+    int i = 0;
+    char student_names[10][100] = {
+        "karthikeya",
+        "josh",
+        "sam",
+        "joy",
+        "phanni",
+        "random dude",
+        "thala",
+        "steve",
+        "robbin",
+        "ussop"};
+
+    char student_roll_numbers[10][3] = {
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"};
+
+    char student_roll_number[3];
+    printf("What roll number do you want the name for? \n");
+    scanf("%s", student_roll_number);
+
+    int index;
+
+    while (strcmp(student_roll_numbers[i] , student_roll_number))
+    {
+        i++;
+    }
+
+    printf("the student's name is: %s", student_names[i]);
+
+    return 0;
+}
+*/
+
+/*given a string "123456789" write a program that displays:
+
+* * * * 1
+* * * 2 3 2
+* * 3 4 5 4 3
+* 4 5 6 7 6 5 4
+5 6 7 8 9 8 7 6 5
+
+
+int main()
+{
+    char str[] = "123456789";
+    int i, j, k;
+    for (i = 0; i < 5; i++)
+    {
+        for (j = 0; j < 4 - i; j++)
+        {
+            printf("  ");
+        }
+        for (j = 0; j <= i; j++)
+        {
+            printf(" %c", str[i + j]);
+        }
+        for (j = i - 1; j >= 0; j--)
+        {
+            printf(" %c", str[i + j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+*/
 
 
 
