@@ -1459,6 +1459,120 @@ int main()
 }
 */
 
+/* write a C program to cpmpare two strings without using any string function. (strncmp)
+
+int main(){
+
+    char string1[100];
+    char string2[100];
+    printf("write an input to compare, string 1: \n");
+    fgets(string1 , 100 , stdin);
+    printf("write an input to compare, string 2: \n");
+    fgets(string2 , 100 , stdin);
+    if((int)string1 == (int)string2){printf("both the strings are same" , string1 , string2);}
+    else if((int)string1 != (int)string2){
+    for(int i = 0; i < strlen(string1) > strlen(string2) ? strlen(string1): strlen(string2) ; i++){
+        if((int)string1[i] < (int)string2[i]){printf("1. %s2. %s" , string1 , string2); break;}
+        else if((int)string1[i] > (int)string2[i]){printf("1. %s2. %s" , string2 , string1); break;}
+        else if((int)string1[i] == (int)string2[i]) {continue;}
+    }
+    }
+    return 0;
+}
+*/
+
+/* [TODO]  [INCOMPLETE]
+// write a C program to find the largest and smallest sized word in a string.
+
+int main(){
+
+    char string[100];
+    printf("enter the string to find the largest and smallest sized word.\n");
+    fgets(string , sizeof(string) , stdin);
+    int largest = 0 , smallest = 0 , new_largest , new_smallest;
+
+    for(int i = 0; string[i] != '\0' ; i++){
+
+        while(string[i] != ' ' && string[i] != ',' && string[i] != '.' && string[i] != '\n'){
+            if(largest++ > largest){new_largest = largest++; }
+            else if(largest++ < largest){new_largest = largest;}
+            if(smallest++ < smallest){new_smallest++;}
+            else if(smallest++ > smallest){new_smallest = smallest;}
+        }
+        if(string[i] == ' ' && ',' && '.' ){
+            i++;
+            new_largest = 0;
+            new_smallest = 0;
+        }
+
+    }
+    printf("the length of smallest is: %d" , smallest);
+    printf("the length of largest is: %d" , largest);
+    return 0;
+}
+*/
+
+/* write a C program to replace all the white spaces in a string with double white spaces.
+
+int main(){
+
+    char string[100];
+    printf("enter a string. \n");
+    fgets(string, sizeof(string) , stdin);
+
+    char* token;
+    token = strtok(string , " ");
+
+    while(token != NULL){
+        printf("%s  " , token);
+        token = strtok(NULL , " ");
+    }
+    return 0;
+}
+*/
+
+/* [TODO] [INCOMPLETE]
+// write a C program to enter multiple strings and display them in lexicographical order.
+*/
+
+/* // Write a C program to concatenate two strings without using any string function.
+
+int main()
+{
+    char string1[] = "hello there! ";
+    char string2[] = "I am karthikeya.";
+    int length3 = strlen(string1) + strlen(string2);
+    char string3[length3 + 1];
+
+    int i = 0;
+    int j = i;
+
+    while (j < length3)
+    {
+        while (string1[i] != '\0')
+        {
+            string3[i] = string1[i];
+            i++;
+            j++;
+        }
+
+        i = 0;
+        while (string2[i] != '\0')
+        {
+            string3[j] = string2[i];
+            i++;
+            j++;
+        }
+
+        string3[length3] = '\0';
+    }
+
+    printf("%s", string3);
+    return 0;
+} 
+*/
+
+// Chapter 9 donee
 
 
 
