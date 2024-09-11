@@ -2,7 +2,9 @@
 #include <string.h>
 
 int main() {
-  const char* str = "this is going very long";
+  char str[100];
+  fgets(str, 100, stdin);
+
   int str_len = strlen(str);
   int small_len = str_len;
   int large_len = 0;
@@ -11,7 +13,7 @@ int main() {
   int pos_large_word = 0;
 
   for(int i=0; i<str_len; i++){
-    if(str[i] == ' '){
+    if(str[i] == ' ' || str[i] == '\n'){
       if(cur_word_len < small_len){
         small_len = cur_word_len;
         pos_small_word = i-small_len;
