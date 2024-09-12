@@ -1494,13 +1494,12 @@ int main(){
     for(int i = 0; string[i] != '\0' ; i++){
 
         while(string[i] != ' ' && string[i] != ',' && string[i] != '.' && string[i] != '\n'){
-            if(largest++ > largest){new_largest = largest++; }
+            if(largest++ > largest){new_largest = largest; }
             else if(largest++ < largest){new_largest = largest;}
-            if(smallest++ < smallest){new_smallest++;}
+            if(smallest++ < smallest){new_smallest;}
             else if(smallest++ > smallest){new_smallest = smallest;}
         }
         if(string[i] == ' ' && ',' && '.' ){
-            i++;
             new_largest = 0;
             new_smallest = 0;
         }
@@ -1569,10 +1568,110 @@ int main()
 
     printf("%s", string3);
     return 0;
-} 
+}
 */
 
 // Chapter 9 donee
 
+/* //write a function "exchange" to interchange the values of  two variables, say x and y. Illustrat
+   the use of this function, in a calling function. Assume that x and y are defined as global variables.
+float a = 3.14;
+float b = 1.00;
+void exchange(float *x , float *y){
+    float c;
+    c = *x;
+    *x = *y;
+    *y = c;
+}
+
+int main(){
+    exchange(&a , &b);
+    printf("a: %0.2f \nb: %0.2f" , a , b);
+    return 0;
+}
+*/
+
+/* // Write a funcition space(x) that can be used to provide a space of x positions between two output numbers.
+
+void space(int x){
+    for(int i = 0; i < x; i++){
+        printf(" ");
+    }
+}
+
+int main(){
+    printf("6");
+    space(3);
+    printf("9");
+    return 0;
+}
+*/
+
+/* // Use recursive function calls to evaluate: f(x) = x - x^3/3! + x^5/5! - x^7/7! ....
+
+long long factorial(long n){
+    if(n==0 || n==1){
+        return 1;
+    }
+    return n*(factorial(n-1));
+}
+
+double function(double x , int n){
+    if(n == 0){
+        return x;
+    }
+    int power = (2*n+1);
+    double term = ((n%2==0 ? 1:-1) * pow(x, power)) / factorial(power);
+    return term + function(x , n-1);
+
+}
+
+int main(){
+    printf("factorial: %lf" , function(2, 4));
+    return 0;
+}
+*/
+
+/* // an n_order polynomial can be evaluated as follows: P = (((a0x + a1)x + a2)x + a3 ....)
+
+int function(int x, int n, int arr[]){
+
+    double result = arr[0];
+
+    for (int i = 1; i <= n; i++){
+        result = result * x + arr[i];
+    }
+    return result;
+}
+
+int main(){
+    int arr[] = {1, 1, 1 , 1 , 1 , 1};
+    printf("%d", function(1, 3, arr));
+    return 0;
+}
+*/
+
+/* // the fibonacci numbers are defined recursively as follows: 
+F1 = 1
+F2 = 1
+Fn = Fn-1 + Fn-2 , n>2
+write a function that will generate and print the first n fibonacci numbers. n = 5, n = 10, n = 15.
+int fib(int n){
+    int term = 0;
+    if(n==0){
+        return 0;
+    }
+    if(n==1){
+        return 1;
+    }
+    for(int i=2; i<n - 2; i++){
+    return fib(n-1) + fib(n-2);
+    }
+}
+int main(){
+    printf("the sum of the fib seq is: %d" , fib(15));
+    return 0;
+}
+*/
 
 
