@@ -1006,8 +1006,6 @@ int main()
 }
 */
 
-//
-
 /*write a program to do the following: Questions and answers.
 
 int main()
