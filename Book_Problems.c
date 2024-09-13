@@ -265,7 +265,8 @@ int main(){
 }
 */
 
-/*given an integer number, write a program that displays the number as follows: first line = all digits, second line = all digits except 1st digit.
+/*given an integer number, write a program that displays the number as follows: 
+    first line = all digits, second line = all digits except 1st digit.
 
 int main(){
     char number[100];
@@ -350,7 +351,8 @@ int main() {
 }
 */
 
-/* given three values , write a prgram to read three values from keybard and print out the largest of them without using the if statement.
+/* given three values , write a prgram to read three values from keybard and print out the largest of them without using 
+    the if statement.
 
 int main(){
 
@@ -656,7 +658,8 @@ int main(){
 }
 */
 
-/* //write a program using for and if statement to display the capital letter S in a grid of 15 rows and 18 columns as shown billow:
+/* //write a program using for and if statement to display the capital letter S in a grid of 
+    15 rows and 18 columns as shown billow:
 
 int main(){
     int i, j , stars, dash;
@@ -675,7 +678,8 @@ int main(){
     return 0;
 } */
 
-/*//write a program to compute the value of euler's number e, that is used as the base of natural logarithms. use the following formula:
+/*//write a program to compute the value of euler's number e, that is used as the base of natural logarithms.
+ use the following formula:
 // e = 1 + 1/1! + 1/2! ... + 1/n!; use a suitable loop construct. the loop must end when the difference between two succesive values of e is less than 0.00001.
 
 int main(){
@@ -1573,7 +1577,7 @@ int main()
 
 // Chapter 9 donee
 
-/* //write a function "exchange" to interchange the values of  two variables, say x and y. Illustrat
+/* // write a function "exchange" to interchange the values of  two variables, say x and y. Illustrat
    the use of this function, in a calling function. Assume that x and y are defined as global variables.
 float a = 3.14;
 float b = 1.00;
@@ -1742,7 +1746,8 @@ int main(){
 }
 */
 
-/* //write a function that will scan a character string passed as an argument and convert all lowercase character to uppercase characters.
+/* // write a function that will scan a character string passed as an argument and 
+convert all lowercase character to uppercase characters.
 
 void lwr_to_upr(char arr[]){
 
@@ -1755,10 +1760,122 @@ void lwr_to_upr(char arr[]){
 
 int main(){
 
-    char str[] = "hello there I AM KARTHIKEYA";
+    char str[] = "abcdefghijklmnopqrstuvwxyz";
     lwr_to_upr(str);
     printf("%s", str);
 
+}
+*/
+
+/* // develop a top_down modular program to implement a calculator. The program should request the user to input
+two numbers and display one of the following as per the desire of the user:
+a) sum of the numbers
+b) differene of the numbers
+c) product of the numbers
+d) division of the numbers
+e) power of the numbers
+
+double sum(double a, double b){
+    printf("%lf", a + b);
+}
+
+double difference(double a, double b){
+    if(a>b){
+        printf("%lf", a-b);
+    }
+    else if(b>a){
+        printf("%lf", b-a);
+    }
+}
+
+double product(double a, double b){
+    printf("%lf", a*b);
+}
+
+double division(double a, double b){
+    if(b==0){
+        printf("the division is not possible.\n");
+        return 0;
+    }
+    printf("%lf", a/b);
+}
+
+double power(double a, double b){
+    printf("%lf", ((int)a)^((int)b));
+}
+
+int main(){
+
+    double a,b;
+    char operation;
+    printf("enter the first number.\n");
+    scanf("%lf", &a);
+    printf("enter the second number.\n");
+    scanf("%lf", &b);
+    printf("what operation do you want to use?\na) sum of the numbers\nb) differene of the numbers\nc) product of the numbers\nd) division of the numbers\ne) power of the numbers\n");
+    scanf("%s", &operation);
+
+    if(operation='a'){
+        sum(a,b);
+    }
+    else if(operation='b'){
+        difference(a,b);
+    }
+    else if(operation='c'){
+        product(a,b);
+    }
+    else if(operation='d'){
+        division(a,b);
+    }
+    else if(operation='e'){
+        power(a,b);
+    }
+
+return 0;
+
+}
+*/
+
+/* // develop a modular interactive program using function that reads the values of three sides of a triagnle.
+    and displays either its area ro its perimeter as per the request of the user.
+
+double perimeter(double a, double b, double c){
+    return a+b+c;
+}
+
+double semi_perimeter(double a, double b, double c){
+    return (a+b+c)/2.0;
+}
+
+double area(double semi_perimeter, double a, double b, double c){
+    return sqrt((semi_perimeter-a)*(semi_perimeter-b)*(semi_perimeter-c));
+}
+
+int main(){
+
+    double a,b,c;
+    char operation;
+    printf("enter length of side 1:");
+    scanf("%lf", &a);
+    printf("enter length of side 2:");
+    scanf("%lf", &b);
+    printf("enter length of side 3:");
+    scanf("%lf", &c);
+
+    printf("what do you want to find out?\na) Area\nb) Perimeter\n");
+    scanf("%c", &operation);
+    scanf("%c");
+
+    double s = semi_perimeter(a,b,c); 
+
+    if(operation == 'a'){
+        printf(("the Area is:%lf \n"), area(s, a, b, c));
+    }
+    else if(operation == 'b'){
+        printf(("the perimeter is:%lf \n"), perimeter(a, b, c));
+    }
+
+    return 0;
 }
 */
 
