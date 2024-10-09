@@ -1130,6 +1130,7 @@ int main()
 
 /* //write a program to replace a particular word by another word in a given string.
 
+*/
 
 void remove_newline(char* str) {
     size_t len = strlen(str);
@@ -1158,32 +1159,27 @@ int main()
     change = strstr(string, change_word);
     if (change != NULL)
     {
-        strncpy(change, new_word, strlen(new_word));
-        puts(string);
-    }
+        size_t len_before = change - string;
+        size_t len_change_word = strlen(change_word);
+        size_t len_new_word = strlen(new_word);
+
+        char result[1000] = {0};
+
+        strncpy(result, string, len_before);
 
 
-    size_t len_before = change - string;
-    size_t len_change_word = strlen(change_word);
-    size_t len_new_word = strlen(new_word);
-
-    char result[1000] = {0};
-
-    strncpy(result, string, len_before);
+        strcat(result, new_word);
 
 
-    strcat(result, new_word);
+        strcat(result, change + len_change_word);
 
 
-    strcat(result, change + len_change_word);
+        printf("Modified string: %s\n", result);
+        }
 
-
-    printf("Modified string: %s\n", result);
-
-    printf("%s", string);
-    return 0;
+        else{printf("%s", string);}
+        return 0;
 }
-*/
 
 /* write a program that reads a string from the keyboard and determines whether the string is a palindrome or not.
 
