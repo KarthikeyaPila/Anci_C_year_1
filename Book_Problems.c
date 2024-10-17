@@ -33,7 +33,7 @@ int main(){
 }
 */
 
-/*Write a programe to output the square of the number:
+/* Write a programe to output the square of the number:
 int main(){
 double x;
     printf("which number do you want to square? ");
@@ -45,7 +45,7 @@ double x;
 }
 */
 
-/*write a C program that reads the value of distance travelled by a car and the time taken for the same.
+/* write a C program that reads the value of distance travelled by a car and the time taken for the same.
 Next, compute the speed at which the car travelled.
 int main(){
     int reading1;
@@ -60,7 +60,7 @@ int main(){
 }
 */
 
-/*int add(int a , int b){
+/* int add(int a , int b){
     return a + b;}
 
 int sub(int a , int b){
@@ -92,7 +92,7 @@ return 0;
 }
 */
 
-/*2S = a +b +c. write a program to compute the area of the triangle given the values of a b c
+/* 2S = a +b +c. write a program to compute the area of the triangle given the values of a b c
 int main(){
     int a, b , c;
     double S, area;
@@ -127,7 +127,7 @@ int main(){
 }
 */
 
-/*to know the perimeter and area of a circle.
+/* to know the perimeter and area of a circle.
     double add( double a , double b) {
     return a + b;
 }
@@ -145,7 +145,7 @@ int main(){
 
 // CHAPTER 2 DONEE
 
-/*write a program to determine and print the sum of the following harmonic series for a given value of n: 1 + 1/2 + 1/3 + ... 1/n
+/* write a program to determine and print the sum of the following harmonic series for a given value of n: 1 + 1/2 + 1/3 + ... 1/n
 
 int main(){
     int number , i=1;
@@ -162,7 +162,7 @@ int main(){
 }
 */
 
-/*write a program to count and print the number of negative and positive numbers in a given set of numbers.
+/* write a program to count and print the number of negative and positive numbers in a given set of numbers.
 
 int main(){
     int numbers[10], i=0;
@@ -191,7 +191,7 @@ for(i = 0 ; i < 10 ; i++){
 }
 */
 
-/*write a C program to input an integer between 1 and 128 and print its ascii character.
+/* write a C program to input an integer between 1 and 128 and print its ascii character.
 
 int main(){
     int integer;
@@ -207,7 +207,7 @@ int main(){
 }
 */
 
-/*write a C program to input the value of days and then convert it into years, weeks and days.
+/* write a C program to input the value of days and then convert it into years, weeks and days.
 
 int main(){
     double years, weeks, months, days;
@@ -221,7 +221,7 @@ int main(){
 }
 */
 
-/*write a C program to input the amount value and break it to the smalleset possible indian currency.
+/* write a C program to input the amount value and break it to the smalleset possible indian currency.
 
 int main(){
     int amount, smallest;
@@ -246,7 +246,7 @@ int main(){
 
 // CHAPTER 3 DONEE
 
-/*write a program that reads a floating point number and then displays the right most digit of the integral part of the number.
+/* write a program that reads a floating point number and then displays the right most digit of the integral part of the number.
 
 int main(){
     char number[100];
@@ -265,7 +265,7 @@ int main(){
 }
 */
 
-/*given an integer number, write a program that displays the number as follows: 
+/* given an integer number, write a program that displays the number as follows: 
     first line = all digits, second line = all digits except 1st digit.
 
 int main(){
@@ -288,7 +288,7 @@ int main(){
 }
 */
 
-/*The straight line method of computing the yearly depreciation of the value of an item is given by:
+/* The straight line method of computing the yearly depreciation of the value of an item is given by:
 
 int main(){
     double price , service , depreciation , salvage_value;
@@ -387,7 +387,7 @@ int main(){
 }
 */
 
-/*the cost of one type of mobile service is Rs. 250 plus Rs. 1.25 for each call made over and above 100 calls.
+/* the cost of one type of mobile service is Rs. 250 plus Rs. 1.25 for each call made over and above 100 calls.
 
 int main(){
     int calls;
@@ -514,7 +514,7 @@ int main(){
 }
 */
 
-/* //given a list of marks ranging from 0 to 100, write a program to compute and print the number of students:
+/* given a list of marks ranging from 0 to 100, write a program to compute and print the number of students:
 
 int main(){
     int arr[100] = {10 , 20 , 30 , 40 , 50 , 60 , 70, 80, 90, 100, 12,45,56,34,78,13,99,24,45,69,37,35,99,75,77,54,3,2,11,33,77,88,66,55,44,33,22,};
@@ -541,7 +541,7 @@ int main(){
 }
 */
 
-/* //write a program to display a floyd's triangle:
+/* write a program to display a floyd's triangle:
 
 int main(){
     int i , j , rows, number = 1;
@@ -559,7 +559,7 @@ int main(){
 }
 */
 
-/* // write a C program that inputs a string and counts the number of capital and small alphabets in that string.
+/* write a C program that inputs a string and counts the number of capital and small alphabets in that string.
 int main(){
     int capital=0 , i , small=0;
     char string[100];
@@ -579,7 +579,7 @@ int main(){
 
 // Chapt 6 Donee
 
-/* //given a number, write a program using while loop to reverse the digits of the number.
+/* given a number, write a program using while loop to reverse the digits of the number.
 
 int main(){
     int number;
@@ -611,7 +611,7 @@ int main(){
 }
 */
 
-/* //fibonaci sequence
+/* fibonaci sequence
 
 int main(){
     int first = 0  , second = 1, third , end = 0 , number;
@@ -658,7 +658,7 @@ int main(){
 }
 */
 
-/* //write a program using for and if statement to display the capital letter S in a grid of 
+/* write a program using for and if statement to display the capital letter S in a grid of 
     15 rows and 18 columns as shown billow:
 
 int main(){
@@ -678,7 +678,7 @@ int main(){
     return 0;
 } */
 
-/*//write a program to compute the value of euler's number e, that is used as the base of natural logarithms.
+/* write a program to compute the value of euler's number e, that is used as the base of natural logarithms.
  use the following formula:
 // e = 1 + 1/1! + 1/2! ... + 1/n!; use a suitable loop construct. the loop must end when the difference between two succesive values of e is less than 0.00001.
 
@@ -697,7 +697,7 @@ int main(){
 }
 */
 
-/*//write programs to evaluate the follwing:
+/* write programs to evaluate the follwing:
 //a> sinx = x - x^3/3! + x^5/5! - x^7/7! ...
 
 int main(){
@@ -725,7 +725,7 @@ int main(){
 
 // chapter 7 donee
 
-/*an election is contested by 5 candidates. the candidates are numbered 1 to 5 and the voting is done by marking
+/* an election is contested by 5 candidates. the candidates are numbered 1 to 5 and the voting is done by marking
 the candidate number of the ballot paper. write a program to read the ballots and count the votes cast for each
 candidate using an array variable "count". in case, a number read is outside the range 1 to 5, the ballot should
 be considered as a "spoilt" ballot and the program should also count the number of spoilt ballots
@@ -798,7 +798,7 @@ int main()
 }
 */
 
-/*given are two one dimenstional arrays A and B, which are stored in ascending order. write a program to
+/* given are two one dimenstional arrays A and B, which are stored in ascending order. write a program to
 merge them into a single sorted array C that contains every item from arrays A adn B in ascending order.
 
 void merge_arrays(int A[], int lengthA, int B[], int lengthB, int C[])
@@ -856,7 +856,7 @@ int main()
 }
 */
 
-/*write a program that fills a five by five matrix as follows:
+/* write a program that fills a five by five matrix as follows:
 upper left triagnle with +1
 lower right triangle with -1
 right to left diagonal with 0;
@@ -883,7 +883,7 @@ int main(){
 }
 */
 
-/*develop a program to implement the binary search algorithm. this technique compares the search
+/* develop a program to implement the binary search algorithm. this technique compares the search
 key value with the value of the element that is midway in a sorted list.
 
 int main()
@@ -966,7 +966,7 @@ int main()
 }
 */
 
-/*write a program that will count the number of occurrences of a specified character in a given line of text.
+/* write a program that will count the number of occurrences of a specified character in a given line of text.
 
 int main(){
 
@@ -989,7 +989,7 @@ int main(){
 
 // chapter 8 donee
 
-/*write a program, which reads your name from the keyboard and outputs a list of ASCII codes, which represent your name.
+/* write a program, which reads your name from the keyboard and outputs a list of ASCII codes, which represent your name.
 
 int main()
 {
@@ -1006,7 +1006,7 @@ int main()
 }
 */
 
-/*write a program to do the following: Questions and answers.
+/* write a program to do the following: Questions and answers.
 
 int main()
 {
@@ -1128,9 +1128,7 @@ int main()
 }
 */
 
-/* //write a program to replace a particular word by another word in a given string.
-
-*/
+/* write a program to replace a particular word by another word in a given string.
 
 void remove_newline(char* str) {
     size_t len = strlen(str);
@@ -1180,6 +1178,7 @@ int main()
         else{printf("%s", string);}
         return 0;
 }
+*/
 
 /* write a program that reads a string from the keyboard and determines whether the string is a palindrome or not.
 
@@ -1215,7 +1214,7 @@ int main()
 }
 */
 
-/*write a program that reads the cost of an item in the form RRRR.PP where R denotes rupees and P denotes paisa,
+/* write a program that reads the cost of an item in the form RRRR.PP where R denotes rupees and P denotes paisa,
 
 
 int main(){
@@ -1311,7 +1310,7 @@ int main(){
 }
 */
 
-/*write a program to read two strings and compare them using the fxn strncmp() and print a message that
+/* write a program to read two strings and compare them using the fxn strncmp() and print a message that
  the first string is equal, less or greater than the second one.
 
 int main(){
@@ -1351,7 +1350,7 @@ int main()
 }
 */
 
-/*// write a promgram that will copy m consecutive characters from string s1 beginning at position n to another string s2.
+/* write a promgram that will copy m consecutive characters from string s1 beginning at position n to another string s2.
 
 int main()
 {
@@ -1378,7 +1377,7 @@ int main()
 }
 */
 
-/*/ write a program to create a directory of students with roll numbers.
+/* write a program to create a directory of students with roll numbers.
 int main()
 {
     int i = 0;
@@ -1423,7 +1422,7 @@ int main()
 }
 */
 
-/*given a string "123456789" write a program that displays:
+/* given a string "123456789" write a program that displays:
 
 * * * * 1
 * * * 2 3 2
@@ -1532,7 +1531,7 @@ int main(){
 // write a C program to enter multiple strings and display them in lexicographical order.
 */
 
-/* // Write a C program to concatenate two strings without using any string function.
+/* Write a C program to concatenate two strings without using any string function.
 
 int main()
 {
@@ -1571,7 +1570,7 @@ int main()
 
 // Chapter 9 donee
 
-/* // write a function "exchange" to interchange the values of  two variables, say x and y. Illustrat
+/* write a function "exchange" to interchange the values of  two variables, say x and y. Illustrat
    the use of this function, in a calling function. Assume that x and y are defined as global variables.
 float a = 3.14;
 float b = 1.00;
@@ -1589,7 +1588,7 @@ int main(){
 }
 */
 
-/* // Write a funcition space(x) that can be used to provide a space of x positions between two output numbers.
+/* Write a funcition space(x) that can be used to provide a space of x positions between two output numbers.
 
 void space(int x){
     for(int i = 0; i < x; i++){
@@ -1605,7 +1604,7 @@ int main(){
 }
 */
 
-/* // Use recursive function calls to evaluate: f(x) = x - x^3/3! + x^5/5! - x^7/7! ....
+/* Use recursive function calls to evaluate: f(x) = x - x^3/3! + x^5/5! - x^7/7! ....
 
 long long factorial(long n){
     if(n==0 || n==1){
@@ -1630,7 +1629,7 @@ int main(){
 }
 */
 
-/* // an n_order polynomial can be evaluated as follows: P = (((a0x + a1)x + a2)x + a3 ....)
+/* an n_order polynomial can be evaluated as follows: P = (((a0x + a1)x + a2)x + a3 ....)
 
 int function(int x, int n, int arr[]){
 
@@ -1649,7 +1648,7 @@ int main(){
 }
 */
 
-/* // the fibonacci numbers are defined recursively as follows: 
+/* the fibonacci numbers are defined recursively as follows: 
 F1 = 1
 F2 = 1
 Fn = Fn-1 + Fn-2 , n>2
@@ -1672,7 +1671,7 @@ int main(){
 }
 */
 
-/* // write a function that will round a floating-point number to an indicated decimal place.
+/* write a function that will round a floating-point number to an indicated decimal place.
 For example the number 17.457 would yield the value 17.46 when its rounded off to two decimal places.
 
 float roundoff(float number , int decimal_places){
@@ -1699,7 +1698,7 @@ int main(){
 }
 */
 
-/* // write a function "prime" that return 1 if its argument is prime number and returns 0 otherwise.
+/* write a function "prime" that return 1 if its argument is prime number and returns 0 otherwise.
 
 int prime(int number){
 
@@ -1740,7 +1739,7 @@ int main(){
 }
 */
 
-/* // write a function that will scan a character string passed as an argument and 
+/* write a function that will scan a character string passed as an argument and 
 convert all lowercase character to uppercase characters.
 
 void lwr_to_upr(char arr[]){
@@ -1761,7 +1760,7 @@ int main(){
 }
 */
 
-/* // develop a top_down modular program to implement a calculator. The program should request the user to input
+/* develop a top_down modular program to implement a calculator. The program should request the user to input
 two numbers and display one of the following as per the desire of the user:
 a) sum of the numbers
 b) differene of the numbers
@@ -1830,7 +1829,7 @@ return 0;
 }
 */
 
-/* // develop a modular interactive program using function that reads the values of three sides of a triagnle.
+/* develop a modular interactive program using function that reads the values of three sides of a triagnle.
     and displays either its area ro its perimeter as per the request of the user.
 
 double perimeter(double a, double b, double c){
@@ -1873,7 +1872,7 @@ int main(){
 }
 */
 
-/* // write a function that can be called to find the largest element of an m by n matrix.
+/* write a function that can be called to find the largest element of an m by n matrix.
 
 int largest_element(int m, int n, int arr[m][n]){
     int i=0, j;
@@ -1903,7 +1902,7 @@ int main(){
 }
 */
 
-/* // write a function that can be called to compute the product of two matrices of size m by n and n by m.
+/* write a function that can be called to compute the product of two matrices of size m by n and n by m.
 
 void product_matrix(int m, int n, int arr_A[m][n], int arr_B[n][m], int arr_C[m][m]){
     int i,j,k;
@@ -1951,7 +1950,7 @@ int main(){
 }
 */
 
-/* // design and code an interactive modular program that will use functions to a matrix of m by n size, 
+/* design and code an interactive modular program that will use functions to a matrix of m by n size, 
       compute the column averages and row averages, and then print the entire matrix with averages shown in
       respective rows and columns.
 
@@ -2008,7 +2007,7 @@ int main(){
 }
 */
 
-/* // develop a top-down modular program that will perform the following tasks: 
+/* develop a top-down modular program that will perform the following tasks: 
     1. read two integer arrays with unsorted elements.
     2. sort the array's separately.
     3. merge the sorted arrays.

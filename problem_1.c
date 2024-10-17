@@ -1,5 +1,4 @@
-#include <stdio.h>
-
+write a program to display the equation of a line in the form ax + by = c , a = 5, b=8, c=18.
 int main(){
 printf("please input the variables a, b , c for the equation, ax + by = c. \n");
 int a; int b; int c;
@@ -12,4 +11,3 @@ scanf("%d" , &c);
 printf("the equation is: %dx + %dy = %d", a , b , c);
 return 0;
 }
-
