@@ -1,5 +1,5 @@
-.exe
-a.out
+*.exe
+*a.out
 Elabs.c
 Chapter_1
-.gitignore
+*.gitignore
