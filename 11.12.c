@@ -105,7 +105,7 @@ int main() {
     printf("do you want to sort the data on the basis of population? y/n: ");
     scanf(" %c", &buffer);
     if(buffer == 'y'){
-        sort_literacy();
+        sort_population();
         printf("Here's the sorted list: \n");
         for(int i=0; i<5; i++) {
             printf("City: %s, Population: %ld, Literacy Level: %.2f%%\n", cities[i].city, cities[i].population, cities[i].literacy);
