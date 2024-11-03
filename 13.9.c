@@ -24,4 +24,5 @@ int main() {
     printf("Total value of all products: %d\n", total);
 
     return 0;
+    
 }
