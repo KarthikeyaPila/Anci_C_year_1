@@ -12,28 +12,17 @@ struct time_struct{
 }time;
 
 void time_value(){
-
-    int hour;   
-    int minute;
-    int sec;
-
     printf("input the time in the format: HH:MM:SS\n");
-    scanf("%d:%d:%d", &hour, &minute, &sec);
-
-    time.hour = hour;
-    time.minute = minute;
-    time.second = sec;
-
+    scanf("%d:%d:%d", &time.hour, &time.minute, &time.second);
 }
 
 int display(){
-    time_value();
     printf("%d:%d:%d", time.hour, time.minute, time.second);
     return 0;
 }
 
 int main(){
+    time_value();
     display();
 }
-
 
